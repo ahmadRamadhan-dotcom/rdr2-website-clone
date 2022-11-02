@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "Univers Condensed";
+  src: url("/src/fonts/rdr2_font.woff");
+}
+
+@font-face {
+  font-family: Redemption;
+  src: url(/src/fonts/redemption.ttf);
+}
