@@ -18,3 +18,9 @@
     </div>
   </div>
 </template>
+
+<style scoped>
+*::selection {
+  background-color: red;
+}
+</style>

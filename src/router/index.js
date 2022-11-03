@@ -8,6 +8,11 @@ const routes = [
     name: "Order",
     component: () => import("../views/OrderView.vue"),
   },
+  {
+    path: "/weaponry",
+    name: "weaponry",
+    component: () => import("../views/WeaponRyView.vue"),
+  },
 ];
 
 const router = createRouter({
