@@ -1,14 +1,14 @@
 <template>
   <div
     v-if="edition === 'UltimateEdition' || edition === ''"
-    class="sm:w-[600px] md:w-[700px] lg:w-[1000px] xl:w-full"
+    class="w-11/12 mx-auto sm:mx-0 sm:w-[600px] md:w-[700px] lg:w-[1000px] xl:w-full"
   >
     <span
-      class="ultimate_edition sm:text-[44px] md:text-[47px] lg:text-[50px] font-['RDR_Lino'] text-[#fff] font-normal"
+      class="ultimate_edition text-[44px] md:text-[47px] lg:text-[50px] font-['RDR_Lino'] text-[#fff] font-normal"
       >Ultimate Edition</span
     >
     <p
-      class="text-[#fff] md:w-[550px] md:text-center md:mx-auto description font-['Serif_Demibold'] font-normal sm:text-sm md:text-[15px] lg:text-base"
+      class="text-[#fff] md:w-[550px] md:text-center md:mx-auto description font-['Serif_Demibold'] font-normal text-sm md:text-[15px] lg:text-base"
     >
       The Red Dead Redemption 2: Ultimate Edition delivers all the Story Mode
       content from the Special Edition plus additional bonuses for Red Dead

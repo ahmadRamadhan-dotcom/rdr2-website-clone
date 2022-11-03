@@ -3,17 +3,21 @@
     v-for="(data, index) in defaultDisplay"
     :key="index"
     v-if="selected == ''"
-    class="sm:mt-10"
+    class="mt-10"
   >
     <div v-for="(dat, index) in data.image" :key="index">
       <figure v-show="edition === ''" v-if="dat[0] === 'UltimateEdition'">
-        <img :src="dat[1]" alt="" class="sm:max-h-[33em] lg:max-h-[70em]" />
+        <img
+          :src="dat[1]"
+          alt=""
+          class="max-h-[27em] mx-auto sm:mx-0 sm:max-h-[33em] lg:max-h-[70em]"
+        />
       </figure>
       <figure v-if="dat[0] == edition">
         <img
           :src="dat[1]"
           alt=""
-          class="sm:max-h-[33em] sm:mx-auto md:max-h-[50em] xl:max-h-[70em]"
+          class="h-[27em] sm:max-h-[33em] mx-auto md:max-h-[50em] xl:max-h-[70em]"
         />
       </figure>
     </div>

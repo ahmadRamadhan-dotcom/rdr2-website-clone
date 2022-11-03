@@ -6,7 +6,7 @@
           <img
             :src="dat[1]"
             alt=""
-            class="sm:max-h-[33em] md:mx-auto xl:max-h-[70em]"
+            class="max-h-[25em] mx-auto sm:mx-0 sm:max-h-[33em] md:mx-auto xl:max-h-[70em]"
           />
         </figure>
       </div>

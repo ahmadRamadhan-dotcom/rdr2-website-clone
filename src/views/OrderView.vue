@@ -3,9 +3,9 @@
     id="order"
     class="bg-[url('https://www.rockstargames.com/reddeadredemption2/dist/img/global/b5c6c5b0cd5b97327e43face0125b9a1.jpg')] min-h-[120vh]"
   >
-    <div class="select_edition sm:flex sm:justify-center">
+    <div class="select_edition flex justify-center">
       <div
-        class="sm:w-[600px] lg:w-[700px] xl:w-[870px] 2xl:w-[44%] sm:grid sm:place-content-center lg:flex items-center lg:mt-10 lg:gap-1 xl:gap-0 lg:items-start xl:items-center"
+        class="w-11/12 sm:w-[600px] lg:w-[700px] xl:w-[870px] 2xl:w-[44%] grid place-content-center lg:flex items-center lg:mt-10 lg:gap-1 xl:gap-0 lg:items-start xl:items-center"
       >
         <CardDefaultOrderPage
           :default-display="defaultDisplay"
@@ -17,7 +17,7 @@
           :selected="selected"
           :edition="edition"
         />
-        <div v-show="edition === '' && selected != ''">
+        <div v-show="edition === '' && selected != ''" class="mt-10">
           <div v-for="(data, index) in platformData" :key="index">
             <div v-if="data.platform === selected">
               <div v-for="(dat, index) in data.image" :key="index">
@@ -25,7 +25,7 @@
                   <img
                     :src="dat[1]"
                     alt=""
-                    class="sm:max-h-[33em] lg:max-h-[50em] md:mx-auto xl:max-h-[70em]"
+                    class="max-h-[25em] mx-auto sm:mx-0 sm:max-h-[33em] lg:max-h-[50em] md:mx-auto xl:max-h-[70em]"
                   />
                 </figure>
               </div>
@@ -33,10 +33,10 @@
           </div>
         </div>
         <div
-          class="xl:ml-7 md:mt-5 sm:max-w-[420px] md:max-w-[480px] lg:w-full"
+          class="xl:ml-7 mt-5 sm:mt-0 md:mt-5 sm:max-w-[420px] md:max-w-[480px] lg:w-full"
         >
           <p
-            class="font-['RDR_Lino'] sm:text-[22px] xl:text-[25px] font-normal text-white"
+            class="font-['RDR_Lino'] text-[22px] xl:text-[25px] font-normal text-white"
           >
             Select Edition:
           </p>
@@ -47,20 +47,20 @@
               v-for="(data, index) in editionData"
               @click="edition = data.name"
               :key="index"
-              class="border cursor-pointer text-base rounded-md sm:p-2"
+              class="border cursor-pointer text-base rounded-md p-2"
             >
               {{ data.content }}
             </p>
           </div>
           <div class="platform grid gap-2">
             <p
-              class="font-['RDR_Lino'] sm:text-[22px] xl:text-[25px] xl:mt-7 font-normal text-white"
+              class="font-['RDR_Lino'] text-[22px] xl:text-[25px] mt-4 sm:mt-0 xl:mt-7 font-normal text-white"
             >
               Select Platform:
             </p>
             <select
               v-model="selected"
-              class="bg-black cursor-pointer xl:mb-2 border rounded-md xl:w-full sm:p-1.5 text-white"
+              class="bg-black cursor-pointer xl:mb-2 border rounded-md xl:w-full p-1.5 text-white"
             >
               <option value="" disabled selected hidden>PC Download</option>
 
@@ -99,7 +99,6 @@
         </div>
       </div>
     </div>
-    <p id="hr"></p>
     <DescriptionEditionOrder :edition="edition" />
   </div>
 </template>

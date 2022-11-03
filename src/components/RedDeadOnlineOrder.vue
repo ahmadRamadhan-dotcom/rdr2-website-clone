@@ -1,14 +1,14 @@
 <template>
   <div
     v-if="edition === 'RedDeadOnline'"
-    class="grid place-content-center sm:w-[500px] md:w-[700px] lg:w-[1000px] sm:mx-auto"
+    class="grid place-content-center w-11/12 mx-auto sm:w-[500px] md:w-[700px] lg:w-[1000px] sm:mx-auto"
   >
     <span
-      class="red_dead_one_edition sm:text-[44px] lg:text-[50px] font-['RDR_Lino'] text-[#fff] font-normal"
+      class="red_dead_one_edition text-[44px] lg:text-[50px] font-['RDR_Lino'] text-[#fff] font-normal"
       >Red Dead Online
     </span>
     <p
-      class="sm:text-sm lg:text-base text-[#fff] font-normal font-['Serif_Demibold'] sm:w-[540px] lg:w-[700px] xl:w-[880px]"
+      class="text-sm lg:text-base text-[#fff] font-normal font-['Serif_Demibold'] sm:w-[540px] lg:w-[700px] xl:w-[880px]"
     >
       Step into the vibrant, ever-evolving world of Red Dead Online and
       experience life in frontier America. Chase down bounties, battle outlaw

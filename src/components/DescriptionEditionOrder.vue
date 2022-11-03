@@ -2,8 +2,8 @@
   <div
     :class="
       edition == 'UltimateEdition' || edition === ''
-        ? 'sm:mt-32 xl:mt-40'
-        : 'sm:mt-[120px] xl:mt-24'
+        ? 'mt-24 sm:mt-32 xl:mt-40'
+        : 'mt-24 sm:mt-[120px] xl:mt-24'
     "
   >
     <div class="text-center grid place-content-center">
