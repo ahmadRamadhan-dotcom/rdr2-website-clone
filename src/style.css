@@ -9,5 +9,15 @@
 
 @font-face {
   font-family: Redemption;
-  src: url(/src/fonts/redemption.ttf);
+  src: url("/src/fonts/redemption.ttf");
+}
+
+@font-face {
+  font-family: "RDR Lino";
+  src: url("/src/fonts/RDR_Lino.ttf");
+}
+
+@font-face {
+  font-family: "Serif Demibold";
+  src: url("/src/fonts/Serif_Demibold.ttf");
 }
