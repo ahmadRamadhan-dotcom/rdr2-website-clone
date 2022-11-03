@@ -21,3 +21,12 @@
   font-family: "Serif Demibold";
   src: url("/src/fonts/Serif_Demibold.ttf");
 }
+
+@font-face {
+  font-family: "UniversedCondensed";
+  src: url("/src/fonts/UniversCondensed.ttf");
+}
+
+body {
+  background-color: #000;
+}
