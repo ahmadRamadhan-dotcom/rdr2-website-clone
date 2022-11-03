@@ -1,8 +1,9 @@
 <template>
-  <a
+  <router-link
     class="container_card w-11/12 md:w-[28%] lg:w-[30%] 2xl:w-[31%]"
     href=""
     v-for="(data, index) in featuresData"
+    :to="data.to"
   >
     <div
       id="card"
@@ -15,7 +16,7 @@
         >{{ data.desc }}</span
       >
     </div>
-  </a>
+  </router-link>
 </template>
 
 <script setup>

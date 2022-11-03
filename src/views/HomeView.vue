@@ -3,6 +3,7 @@
     <Banner />
     <Overview />
     <Features />
+    <Outlaw />
   </div>
 </template>
 
@@ -10,4 +11,5 @@
 import Banner from "../components/Banner.vue";
 import Overview from "../components/Overview.vue";
 import Features from "../components/Features.vue";
+import Outlaw from "../components/Outlaw.vue";
 </script>
