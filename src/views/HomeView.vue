@@ -1,14 +1,13 @@
 <template>
-  <div
-    id="home"
-    class="bg-[url('https://www.rockstargames.com/reddeadredemption2/dist/img/global/bg/200a43a068ec998508926f7a070b4e3e.jpg')]"
-  >
+  <div id="home">
     <Banner />
     <Overview />
+    <Features />
   </div>
 </template>
 
 <script setup>
 import Banner from "../components/Banner.vue";
 import Overview from "../components/Overview.vue";
+import Features from "../components/Features.vue";
 </script>
