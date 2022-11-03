@@ -1,3 +1,9 @@
 <template>
-  <div id="home"></div>
+  <div id="home">
+    <Banner />
+  </div>
 </template>
+
+<script setup>
+import Banner from "../components/Banner.vue";
+</script>
