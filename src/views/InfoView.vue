@@ -1,7 +1,9 @@
 <template>
   <div
     id="info"
-    class="bg-[url('https://www.rockstargames.com/reddeadredemption2/dist/img/global/bg/200a43a068ec998508926f7a070b4e3e.jpg')] min-h-screen -z-10 relative -mb-[35px] flex justify-center"
+    :class="{ 'sepia-[.75] blur-[2px]': sideBar }"
+    class="bg-[url('https://www.rockstargames.com/reddeadredemption2/dist/img/global/bg/200a43a068ec998508926f7a070b4e3e.jpg')] min-h-screen relative -mb-[35px] flex justify-center"
+    @click="hideSideBar"
   >
     <div
       class="w-11/12 sm:w-[94%] md:w-9/12 lg:w-[1000px] xl:w-[1200px] 2xl:w-9/12 lg:flex xl:gap-2"
@@ -28,6 +30,8 @@
 </template>
 
 <script setup>
+import { storeToRefs } from "pinia";
+import { useMainNavStore } from "../store/MainNavStore";
 const infoData = [
   {
     id: 1,
@@ -45,4 +49,17 @@ const infoData = [
       "From the creators of Grand Theft Auto V and Red Dead Redemption, Red Dead Redemption 2 is an epic tale of life in America at the dawn of the modern age. Out now on Playstation 4, Xbox One, PC, and Stadia.",
   },
 ];
+const main = useMainNavStore();
+
+const { sideBar } = storeToRefs(main);
+
+const hideSideBar = () => {
+  sideBar.value = !sideBar.value;
+};
 </script>
+
+<style scoped>
+*::selection {
+  background-color: #cc0000;
+}
+</style>
