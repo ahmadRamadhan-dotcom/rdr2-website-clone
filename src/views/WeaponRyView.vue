@@ -2,6 +2,7 @@
   <div
     :class="{ 'sepia-[.75] blur-[2px]': sideBar }"
     class="bg-[url('https://www.rockstargames.com/reddeadredemption2/dist/img/global/features/gang/7ea7dc0fb3e78ce6a5e9c27b694ee07b.jpg')] grid place-content-center"
+    @click="sideBar = false"
   >
     <div
       class="mt-10 grid gap-3 items-center w-10/12 sm:w-[550px] md:w-11/12 mx-auto xl:p-[200px_200px] text-center"
