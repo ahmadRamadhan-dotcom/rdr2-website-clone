@@ -13,6 +13,11 @@ const routes = [
     name: "weaponry",
     component: () => import("../views/WeaponRyView.vue"),
   },
+  {
+    path: "/info",
+    name: "info",
+    component: () => import("../views/InfoView.vue"),
+  },
 ];
 
 const router = createRouter({
