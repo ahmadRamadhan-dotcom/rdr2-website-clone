@@ -7,39 +7,42 @@ const sideBarData = [
   {
     id: 6,
     name: "features",
-
-    children: [
-      {
-        name: "the van der linde gang",
-        to: "/",
-      },
-      {
-        name: "the frontier, cities & towns",
-        to: "/",
-      },
-      {
-        name: "wildlife",
-        to: "/",
-      },
-      {
-        name: "weaponRy",
-        to: "/weaponRy",
-      },
-      {
-        name: "music",
-        to: "/",
-      },
-      {
-        name: "social club",
-        to: "/",
-      },
-    ],
     to: "/",
   },
-  { id: 7, name: "news", to: "/" },
-  { id: 8, name: "online", to: "/" },
-  { id: 9, name: "downloads", to: "/" },
-  { id: 10, name: "buy now", to: "/order" },
+  {
+    id: 7,
+    name: "the van der linde gang",
+    to: "/",
+  },
+  {
+    id: 7,
+    name: "the frontier, cities & towns",
+    to: "/",
+  },
+  {
+    id: 7,
+    name: "wildlife",
+    to: "/",
+  },
+  {
+    id: 7,
+    name: "weaponRy",
+    to: "/weaponRy",
+  },
+  {
+    id: 7,
+    name: "music",
+    to: "/",
+  },
+  {
+    id: 7,
+    name: "social club",
+    to: "/",
+  },
+  { name: "news", to: "/" },
+  { name: "online", to: "/" },
+  { name: "downloads", to: "/" },
+  { name: "buy now", to: "/order" },
 ];
 
 export default sideBarData;
