@@ -1,6 +1,7 @@
 <template>
   <div
     id="order"
+    :class="{ 'sepia-[.75] blur-[2px]': sideBar }"
     class="bg-[url('https://www.rockstargames.com/reddeadredemption2/dist/img/global/b5c6c5b0cd5b97327e43face0125b9a1.jpg')] min-h-[120vh]"
   >
     <div class="select_edition flex justify-center">
@@ -109,8 +110,14 @@ import CardDefaultOrderPage from "../components/CardDefaultOrderPage.vue";
 import CardOrderPage from "../components/CardOrderPage.vue";
 import DescriptionEditionOrder from "../components/DescriptionEditionOrder.vue";
 import platformData from "../data/platformData";
+import { storeToRefs } from "pinia";
+import { useMainNavStore } from "../store/MainNavStore";
 const selected = ref("");
 const edition = ref("");
+
+const main = useMainNavStore();
+
+const { sideBar } = storeToRefs(main);
 
 const editionData = [
   {

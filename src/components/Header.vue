@@ -1,12 +1,17 @@
 <template>
   <header class="bg-[#000] min-h-[35px] sticky top-0 z-[30]">
     <div class="flex items-center justify-between">
-      <div class="logo_title md:flex items-center xl:w-[55%] cursor-pointer">
+      <div
+        @click="showSideBar"
+        class="logo_title md:flex relative items-center xl:w-[55%] cursor-pointer"
+      >
         <p
+          :class="{ 'text-[#cc0000]': sideBar }"
           class="text-white hidden sm:hidden md:block uppercase font-['Redemption'] md:text-2xl font-medium xl:w-full hover:text-[#cc0000]"
         >
           red dead redemption 2
         </p>
+        <SideBar />
       </div>
       <div
         class="order_btn bg-[url('https://www.rockstargames.com/reddeadredemption2/dist/img/global/header/49e3dfcfdb6f28e40cc947fe822f21af.png')] bg-cover bg-center px-10 py-1"
@@ -14,12 +19,27 @@
         <router-link
           to="/order"
           class="text text-[#000] cursor-pointer font-bold font-['Redemption'] uppercase hover:text-[#ececec] text-2xl"
-          >buy now</router-link
-        >
+          >buy now
+        </router-link>
       </div>
     </div>
   </header>
 </template>
+
+<script setup>
+import { storeToRefs } from "pinia";
+import { useMainNavStore } from "../store/MainNavStore";
+import SideBarVue from "./SideBar.vue";
+import SideBar from "./SideBar.vue";
+
+const main = useMainNavStore();
+
+const { sideBar } = storeToRefs(main);
+
+const showSideBar = () => {
+  sideBar.value = !sideBar.value;
+};
+</script>
 
 <style scoped>
 .logo_title::before {

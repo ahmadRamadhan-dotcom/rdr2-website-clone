@@ -1,5 +1,6 @@
 <template>
   <div
+    :class="{ 'sepia-[.75] blur-[2px]': sideBar }"
     class="bg-[url('https://www.rockstargames.com/reddeadredemption2/dist/img/global/features/gang/7ea7dc0fb3e78ce6a5e9c27b694ee07b.jpg')] grid place-content-center"
   >
     <div
@@ -91,6 +92,11 @@
 import weaponData from "../data/weaponData";
 import weaponChoiceData from "../data/weaponChoiceData";
 import CardWeapon from "../components/CardWeapon.vue";
+import { storeToRefs } from "pinia";
+import { useMainNavStore } from "../store/MainNavStore";
+
+const main = useMainNavStore();
+const { sideBar } = storeToRefs(main);
 </script>
 
 <style scoped>
