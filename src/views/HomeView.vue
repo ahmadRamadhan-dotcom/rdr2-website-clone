@@ -1,5 +1,9 @@
 <template>
-  <div :class="sideBar ? 'sepia-[.75] blur-[2px]' : ''" id="home">
+  <div
+    @click="sideBar = false"
+    :class="sideBar ? 'sepia-[.75] blur-[2px]' : ''"
+    id="home"
+  >
     <Banner />
     <Overview />
     <Features />

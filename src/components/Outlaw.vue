@@ -1,6 +1,6 @@
 <template>
   <div
-    class="bg-[url('https://www.rockstargames.com/reddeadredemption2/dist/img/global/home/7f8b27fe693d1c437303ae8ecc15027d.jpg')] relative -mb-[70px] z-10"
+    class="bg-[url('https://www.rockstargames.com/reddeadredemption2/dist/img/global/home/7f8b27fe693d1c437303ae8ecc15027d.jpg')] relative -mb-[35px] pb-4 -z-10"
   >
     <div
       class="outlaw-top bg-[url('https://www.rockstargames.com/reddeadredemption2/dist/img/global/home/8c7128c2b810bf7c6bc9360fed340a4c.png')] bg-no-repeat bg-cover h-32"
