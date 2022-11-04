@@ -11,7 +11,7 @@
         >
           red dead redemption 2
         </p>
-        <SideBar />
+        <SideBar :side-bar-data="sideBarData" />
       </div>
       <div
         class="order_btn bg-[url('https://www.rockstargames.com/reddeadredemption2/dist/img/global/header/49e3dfcfdb6f28e40cc947fe822f21af.png')] bg-cover bg-center px-10 py-1"
@@ -29,8 +29,8 @@
 <script setup>
 import { storeToRefs } from "pinia";
 import { useMainNavStore } from "../store/MainNavStore";
-import SideBarVue from "./SideBar.vue";
 import SideBar from "./SideBar.vue";
+import sideBarData from "../data/sideBarData";
 
 const main = useMainNavStore();
 

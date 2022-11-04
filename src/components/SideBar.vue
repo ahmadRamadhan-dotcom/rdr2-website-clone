@@ -1,7 +1,10 @@
 <script setup>
-import sideBarData from "../data/sideBarData";
 import { useMainNavStore } from "../store/MainNavStore";
 import { storeToRefs } from "pinia";
+
+const props = defineProps({
+  sideBarData: Array,
+});
 
 const main = useMainNavStore();
 
@@ -16,12 +19,12 @@ const { sideBar } = storeToRefs(main);
   >
     <router-link
       v-for="(data, index) in sideBarData"
-      id="list"
       :key="index"
+      :class="{ 'ml-3': data.id === 7 }"
+      class="text-[#fff] text-xl lg:text-[30px] font-['Redemption'] hover:text-[#c00]"
       :to="data.to"
-      :class="{ 'p-3': data.id === 7 }"
-      class="text-[#fff] font-['Redemption'] font-normal xl:text-[30px] hover:text-[#cc0000]"
-      >{{ data.name }}
+    >
+      {{ data.name }}
     </router-link>
   </div>
 </template>
@@ -29,5 +32,9 @@ const { sideBar } = storeToRefs(main);
 <style scoped>
 #list {
   scrollbar-color: black;
+}
+
+.active {
+  color: #c00;
 }
 </style>
